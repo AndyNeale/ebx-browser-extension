@@ -1,0 +1,30 @@
+body {
+  font-family: 'Segoe UI', 'Lucida Grande', Tahoma, sans-serif;
+  font-size: 100%;
+  margin: 2px;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.header {
+  border: 1px solid #191919;
+  background-color: #191919;
+  color: white;
+  padding: 10px;
+}
+
+.loading {
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  background-color: #CCC;
+  padding: 10px;
+}
+
+.content {
+  padding: 10px;
+}
