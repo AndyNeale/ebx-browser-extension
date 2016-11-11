@@ -20,15 +20,52 @@ body {
 }
 
 .title {
-  border-left: 1px solid #CCC;
-  border-right: 1px solid #CCC;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   font-weight: bold;
   padding: 10px;
 }
 
 .content {
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   padding: 10px;
+}
+
+.button {
+  border: 2px solid;
+  border-radius: 3px;
+  padding: 5px 12px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.button-list {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.button-list .button {
+  margin-right: 5px;
+}
+
+.submit {
+  border-color: #23c3b4;
+  color: #23c3b4;
+}
+
+.submit:hover, .submit:active {
+  color: #FFF;
+  background-color: #23c3b4;
+}
+
+.cancel {
+  border-color: #adadad;
+  color: #adadad;
+}
+
+.cancel:hover, .cancel:active {
+  color: #fff;
+  background-color: #adadad;
 }

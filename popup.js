@@ -110,8 +110,10 @@ function renderSelectNetwork(authToken, pageInfo, accountApiList) {
     ';
   }
   selectNetwork += '\
-<input type="button" class="submit" value="Schedule">\
-<input type="button" class="cancel" value="Cancel">\
+<div class="button-list">\
+<a class="button submit" href="#">Schedule</a>\
+<a class="button cancel" href="#">Cancel</a>\
+</div>\
 </form>\
   ';
   renderContent(selectNetwork);
