@@ -2,14 +2,14 @@ body {
   font-family: 'Segoe UI', 'Lucida Grande', Tahoma, sans-serif;
   font-size: 100%;
   margin: 2px;
-  border: 1px solid #CCC;
-  border-radius: 2px;
   min-width: 200px;
   max-width: 400px;
 }
 
 .header {
   border: 1px solid #191919;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
   background-color: #191919;
   color: white;
   padding: 10px;
@@ -20,11 +20,15 @@ body {
 }
 
 .title {
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
   font-weight: bold;
-  background-color: #CCC;
   padding: 10px;
 }
 
 .content {
+  border: 1px solid #CCC;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   padding: 10px;
 }
