@@ -26,6 +26,15 @@ body {
   padding: 10px;
 }
 
+.message {
+  display: none;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  color: #c00;
+}
+
 .content {
   border: 1px solid #ccc;
   border-bottom-left-radius: 2px;
@@ -68,4 +77,9 @@ body {
 .cancel:hover, .cancel:active {
   color: #fff;
   background-color: #adadad;
+}
+
+.checkbox {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }

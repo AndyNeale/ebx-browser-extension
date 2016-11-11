@@ -84,6 +84,10 @@ function renderError(errorMessage) {
   renderContent('<div>' + errorMessage + '</div>');
 }
 
+function renderFormError(errorMessage) {
+  $('.message').html(errorMessage).show();
+}
+
 function renderLoading() {
   renderTitle('Loading extension...');
   renderContent('\
@@ -100,13 +104,13 @@ function renderLoading() {
 function renderSelectNetwork(authToken, pageInfo, accountApiList) {
   renderTitle('Select Network(s)');
   var selectNetwork = '\
-<div>Share this article to the following network(s):</div>\
+<div>Schedule this article to the following network(s):</div>\
 <form>';
   var accountApi, i;
   for (i = 0; i < accountApiList.length; i++) {
     accountApi = accountApiList[i];
     selectNetwork += '\
-<input name="accountApiId" type="checkbox" value="' + accountApi.accountApiId + '"> ' + accountApi.apiPostName + '<br>\
+<input class="checkbox" name="accountApiId" type="checkbox" value="' + accountApi.accountApiId + '"> ' + accountApi.apiPostName + '<br>\
     ';
   }
   selectNetwork += '\
@@ -119,6 +123,14 @@ function renderSelectNetwork(authToken, pageInfo, accountApiList) {
   renderContent(selectNetwork);
   $('.submit').unbind();
   $('.submit').on('click', function () {
+    var accountApis = [];
+    $('input[name="accountApiId"]:checked').each(function () {
+      accountApis.push(this.value);
+    });
+    if (accountApis.length === 0) {
+      renderFormError('No networks selected');
+      return;
+    }
     alert('Hang on, I haven\'t build this bit yet!');
   });
   $('.cancel').unbind();
